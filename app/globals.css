@@ -1,0 +1,78 @@
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "lenis/dist/lenis.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page: #f4f3ef;
+  --surface: #ffffff;
+  --ink: #070707;
+  --muted: #686868;
+  --line: #E5DED2;
+  --nav-bg: rgba(250, 247, 242, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.display-serif {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+html[lang="ar"] body,
+html[lang="ar"] .display-serif {
+  font-family: "IBM Plex Sans Arabic", Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+.brand-mark span {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: currentColor;
+}
