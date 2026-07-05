@@ -24,6 +24,7 @@ import {AnimatedWave} from "@/components/animated-wave";
 import {DockNav} from "@/components/dock-nav";
 import {Reveal} from "@/components/reveal";
 import {BlurFade} from "@/components/ui/blur-fade";
+import {MagicText} from "@/components/ui/magic-text";
 import {Spotlight, Tilt} from "@/components/ui/tilt";
 import type {Locale} from "@/lib/locales";
 
@@ -140,46 +141,46 @@ const content = {
     },
     portfolio: {
       eyebrow: "Projects",
-      titlePrefix: "Toward",
-      titleHighlight: "Real",
-      titleSuffix: "Success",
-      description: "We are proud of our partnerships and achievements. Here are selected projects we implemented with measurable impact.",
+      titlePrefix: "Your",
+      titleHighlight: "Projects",
+      titleSuffix: "Will Live Here",
+      description: "The portfolio cards are ready. Once you share your real projects, we will replace these placeholders with your work.",
       cta: "Tell us about your project",
       sort: "Latest",
       filters: ["All", "Web Apps", "Internal Systems", "UI/UX Design"],
       projects: [
         {
           image: "/portfolio-project-dashboard.png",
-          tag: "Web App",
-          title: "Project Management Platform",
-          description: "An integrated platform for managing projects, tasks, performance tracking, and real-time reports.",
+          tag: "Slot 01",
+          title: "Project card coming soon",
+          description: "Reserved for your first real project. We will add its image, title, story, and results when ready.",
           accent: "#3f76ff"
         },
         {
           image: "/portfolio-project-taskly.png",
-          tag: "Mobile App",
-          title: "Task Management App",
-          description: "A mobile app that helps teams and individuals organize tasks and increase productivity with ease.",
+          tag: "Slot 02",
+          title: "Project card coming soon",
+          description: "Reserved for your second real project. This card will stay neutral until you provide the details.",
           accent: "#45cf93"
         },
         {
           image: "/portfolio-project-construction.png",
-          tag: "Web App",
-          title: "Official Website for a Construction Company",
-          description: "A modern profile website that reflects the company identity and presents its services and projects professionally.",
+          tag: "Slot 03",
+          title: "Project card coming soon",
+          description: "Reserved for your third real project. The design is ready without showing fake portfolio work.",
           accent: "#f2c451"
         }
       ],
       stats: [
-        {value: "50+", label: "Completed Projects"},
-        {value: "30+", label: "Happy Clients"},
-        {value: "99.9%", label: "Client Satisfaction"},
-        {value: "24/7", label: "Ongoing Support"}
+        {value: "3", label: "Ready Card Slots"},
+        {value: "AR/EN", label: "Bilingual Layout"},
+        {value: "100%", label: "Responsive Cards"},
+        {value: "Ready", label: "For Real Projects"}
       ],
       closing: {
-        title: "Looking for a reliable tech partner?",
-        description: "We turn your ideas into innovative digital solutions that push your business toward growth and excellence.",
-        button: "Start your project now"
+        title: "Have a project ready to showcase?",
+        description: "Send the project details and we will turn these placeholders into real portfolio cards.",
+        button: "Send your project"
       }
     },
     contact: {
@@ -308,46 +309,46 @@ const content = {
     },
     portfolio: {
       eyebrow: "المشاريع",
-      titlePrefix: "نحو",
-      titleHighlight: "نجاح",
-      titleSuffix: "حقيقي",
-      description: "نفخر بشراكاتنا وإنجازاتنا. إليك مجموعة من المشاريع التي قمنا بتنفيذها وحققت أثرًا ملموسًا.",
+      titlePrefix: "مشاريعك",
+      titleHighlight: "راح",
+      titleSuffix: "تكون هنا",
+      description: "كروت الأعمال جاهزة. أول ما ترسل مشاريعك الحقيقية نستبدل هذه الخانات بمحتوى أعمالك.",
       cta: "تواصل معنا عن مشروعك",
       sort: "الأحدث",
       filters: ["الكل", "تطبيقات ويب", "أنظمة داخلية", "تصميم UI/UX"],
       projects: [
         {
           image: "/portfolio-project-dashboard.png",
-          tag: "تطبيق ويب",
-          title: "منصة إدارة المشاريع",
-          description: "منصة متكاملة لإدارة المشاريع والمهام ومتابعة الأداء والتقارير في الوقت الحقيقي.",
+          tag: "خانة 01",
+          title: "كرت مشروع قريبًا",
+          description: "محجوز لأول مشروع حقيقي. نضيف صورته واسمه وقصته ونتائجه عندما تكون جاهزة.",
           accent: "#3f76ff"
         },
         {
           image: "/portfolio-project-taskly.png",
-          tag: "تطبيق جوال",
-          title: "تطبيق إدارة المهام",
-          description: "تطبيق جوال يساعد الفرق والأفراد على تنظيم المهام وزيادة الإنتاجية بسهولة.",
+          tag: "خانة 02",
+          title: "كرت مشروع قريبًا",
+          description: "محجوز لثاني مشروع حقيقي. يبقى الكرت محايد إلى أن ترسل تفاصيله.",
           accent: "#45cf93"
         },
         {
           image: "/portfolio-project-construction.png",
-          tag: "تطبيق ويب",
-          title: "الموقع الرسمي لشركة إنشائية",
-          description: "موقع تعريفي حديث يعكس هوية الشركة ويعرض خدماتها ومشاريعها باحترافية.",
+          tag: "خانة 03",
+          title: "كرت مشروع قريبًا",
+          description: "محجوز لثالث مشروع حقيقي. التصميم جاهز بدون عرض أعمال وهمية.",
           accent: "#f2c451"
         }
       ],
       stats: [
-        {value: "50+", label: "مشروع مكتمل"},
-        {value: "30+", label: "عميل سعيد"},
-        {value: "99.9%", label: "معدل رضا العميل"},
-        {value: "24/7", label: "دعم مستمر"}
+        {value: "3", label: "خانات جاهزة"},
+        {value: "AR/EN", label: "تخطيط بلغتين"},
+        {value: "100%", label: "متجاوب"},
+        {value: "جاهز", label: "لمشاريعك"}
       ],
       closing: {
-        title: "تبحث عن شريك تقني موثوق؟",
-        description: "نحوّل أفكارك إلى حلول رقمية مبتكرة تدفع أعمالك نحو النمو والتميز.",
-        button: "ابدأ مشروعك الآن"
+        title: "عندك مشروع جاهز للعرض؟",
+        description: "أرسل تفاصيل المشروع ونحوّل هذه الخانات إلى كروت أعمال حقيقية.",
+        button: "أرسل مشروعك"
       }
     },
     contact: {
@@ -534,9 +535,10 @@ export default function HomePage({params}: Props) {
       </section>
 
       <Reveal className="mx-auto max-w-6xl px-5 py-20 text-center md:py-28">
-        <p className="mx-auto max-w-4xl text-2xl leading-[1.55] tracking-[-0.03em] md:text-4xl">
-          {copy.intro}
-        </p>
+        <MagicText
+          className="display-serif mx-auto max-w-5xl text-center text-[clamp(30px,3.1vw,52px)] font-normal text-[#111721]"
+          text={copy.intro}
+        />
       </Reveal>
 
       <Reveal id="about" className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[0.8fr_1.2fr] md:py-24">
@@ -675,14 +677,26 @@ export default function HomePage({params}: Props) {
                   className="relative overflow-hidden rounded-lg border border-[#e8ecf3] bg-white shadow-[0_18px_45px_rgba(15,23,42,0.045)] transition duration-200 group-hover:shadow-[0_26px_70px_rgba(63,118,255,0.13)]"
                   style={{borderBottomColor: project.accent}}
                 >
-                  <div className="relative aspect-[2.52/1] overflow-hidden bg-[#edf1f7]">
-                    <Image
-                      src={project.image}
-                      alt=""
-                      width={620}
-                      height={248}
-                      className="h-full w-full object-fill transition duration-700 group-hover:scale-[1.02] group-hover:saturate-110"
-                    />
+                  <div className="relative aspect-[2.52/1] overflow-hidden bg-[#f7faff]">
+                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(63,118,255,0.10),transparent_42%),radial-gradient(circle_at_76%_22%,rgba(242,196,81,0.18),transparent_28%)]" />
+                    <div className="absolute inset-x-8 top-8 h-px bg-[#dfe7f4]" />
+                    <div className="absolute bottom-8 left-8 right-8 h-px bg-[#dfe7f4]" />
+                    <div className="absolute left-8 top-8 h-[calc(100%-64px)] w-px bg-[#dfe7f4]" />
+                    <div className="absolute right-8 top-8 h-[calc(100%-64px)] w-px bg-[#dfe7f4]" />
+                    <div
+                      className="absolute left-7 top-7 inline-flex h-10 items-center rounded-full border border-white/80 bg-white/80 px-4 text-sm font-bold text-[#3f76ff] shadow-[0_12px_28px_rgba(15,23,42,0.06)] backdrop-blur"
+                      style={{color: project.accent}}
+                    >
+                      {project.tag}
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div
+                        className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/80 bg-white/85 text-2xl font-semibold shadow-[0_18px_45px_rgba(15,23,42,0.07)]"
+                        style={{color: project.accent}}
+                      >
+                        +
+                      </div>
+                    </div>
                   </div>
                   <div className={isArabic ? "px-5 pb-6 pt-5 text-right md:px-8 md:pb-7 md:pt-6" : "px-5 pb-6 pt-5 text-left md:px-8 md:pb-7 md:pt-6"}>
                     <h3 className="text-xl font-semibold leading-snug text-[#111721] md:text-2xl">{project.title}</h3>
@@ -692,7 +706,7 @@ export default function HomePage({params}: Props) {
                     <div className="mt-6 flex items-center justify-between md:mt-7">
                       <Link href="#contact" className="inline-flex items-center gap-3 text-sm font-semibold text-[#111721] md:gap-4 md:text-base">
                         {isArabic ? <ArrowLeft aria-hidden="true" size={20} /> : <ArrowUpRight aria-hidden="true" size={20} />}
-                        {isArabic ? "عرض التفاصيل" : "View details"}
+                        {isArabic ? "أضف التفاصيل" : "Add details"}
                       </Link>
                       <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#e8ecf3] text-[#3c4655] md:h-11 md:w-11">
                         <ExternalLink aria-hidden="true" size={19} />
