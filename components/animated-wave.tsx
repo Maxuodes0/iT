@@ -26,7 +26,7 @@ export function AnimatedWave() {
           scale: [1.08, 1.13, 1.08]
         }}
         transition={{
-          duration: 18,
+          duration: 8,
           ease: "easeInOut",
           repeat: Infinity
         }}

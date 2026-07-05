@@ -1,10 +1,12 @@
 import {
+  ArrowLeft,
   ArrowUpRight,
   ChartNoAxesCombined,
   Clock3,
   Cloud,
   Code2,
   Database,
+  ExternalLink,
   Layers3,
   Mail,
   Palette,
@@ -22,6 +24,7 @@ import {AnimatedWave} from "@/components/animated-wave";
 import {DockNav} from "@/components/dock-nav";
 import {Reveal} from "@/components/reveal";
 import {BlurFade} from "@/components/ui/blur-fade";
+import {Spotlight, Tilt} from "@/components/ui/tilt";
 import type {Locale} from "@/lib/locales";
 
 const content = {
@@ -136,14 +139,48 @@ const content = {
       }
     },
     portfolio: {
-      eyebrow: "Portfolio",
-      title: "Project case study format",
-      items: [
-        ["Problem", "[Client was struggling with ...]"],
-        ["Solution", "[I built ...]"],
-        ["Result", "[e.g. increased conversion rate by 30% / cut load time in half]"],
-        ["Tech used", "[React, Node.js, ...]"]
-      ]
+      eyebrow: "Projects",
+      titlePrefix: "Toward",
+      titleHighlight: "Real",
+      titleSuffix: "Success",
+      description: "We are proud of our partnerships and achievements. Here are selected projects we implemented with measurable impact.",
+      cta: "Tell us about your project",
+      sort: "Latest",
+      filters: ["All", "Web Apps", "Internal Systems", "UI/UX Design"],
+      projects: [
+        {
+          image: "/portfolio-project-dashboard.png",
+          tag: "Web App",
+          title: "Project Management Platform",
+          description: "An integrated platform for managing projects, tasks, performance tracking, and real-time reports.",
+          accent: "#3f76ff"
+        },
+        {
+          image: "/portfolio-project-taskly.png",
+          tag: "Mobile App",
+          title: "Task Management App",
+          description: "A mobile app that helps teams and individuals organize tasks and increase productivity with ease.",
+          accent: "#45cf93"
+        },
+        {
+          image: "/portfolio-project-construction.png",
+          tag: "Web App",
+          title: "Official Website for a Construction Company",
+          description: "A modern profile website that reflects the company identity and presents its services and projects professionally.",
+          accent: "#f2c451"
+        }
+      ],
+      stats: [
+        {value: "50+", label: "Completed Projects"},
+        {value: "30+", label: "Happy Clients"},
+        {value: "99.9%", label: "Client Satisfaction"},
+        {value: "24/7", label: "Ongoing Support"}
+      ],
+      closing: {
+        title: "Looking for a reliable tech partner?",
+        description: "We turn your ideas into innovative digital solutions that push your business toward growth and excellence.",
+        button: "Start your project now"
+      }
     },
     contact: {
       eyebrow: "Contact",
@@ -270,14 +307,48 @@ const content = {
       }
     },
     portfolio: {
-      eyebrow: "أعمالي",
-      title: "نموذج عرض لكل مشروع",
-      items: [
-        ["المشكلة", "[العميل كان يعاني من ...]"],
-        ["الحل", "[سويت له ...]"],
-        ["النتيجة", "[مثال: زاد معدل التحويل ٣٠٪ / قلل وقت التحميل للنص]"],
-        ["التقنيات", "[React, Node.js, ...]"]
-      ]
+      eyebrow: "المشاريع",
+      titlePrefix: "نحو",
+      titleHighlight: "نجاح",
+      titleSuffix: "حقيقي",
+      description: "نفخر بشراكاتنا وإنجازاتنا. إليك مجموعة من المشاريع التي قمنا بتنفيذها وحققت أثرًا ملموسًا.",
+      cta: "تواصل معنا عن مشروعك",
+      sort: "الأحدث",
+      filters: ["الكل", "تطبيقات ويب", "أنظمة داخلية", "تصميم UI/UX"],
+      projects: [
+        {
+          image: "/portfolio-project-dashboard.png",
+          tag: "تطبيق ويب",
+          title: "منصة إدارة المشاريع",
+          description: "منصة متكاملة لإدارة المشاريع والمهام ومتابعة الأداء والتقارير في الوقت الحقيقي.",
+          accent: "#3f76ff"
+        },
+        {
+          image: "/portfolio-project-taskly.png",
+          tag: "تطبيق جوال",
+          title: "تطبيق إدارة المهام",
+          description: "تطبيق جوال يساعد الفرق والأفراد على تنظيم المهام وزيادة الإنتاجية بسهولة.",
+          accent: "#45cf93"
+        },
+        {
+          image: "/portfolio-project-construction.png",
+          tag: "تطبيق ويب",
+          title: "الموقع الرسمي لشركة إنشائية",
+          description: "موقع تعريفي حديث يعكس هوية الشركة ويعرض خدماتها ومشاريعها باحترافية.",
+          accent: "#f2c451"
+        }
+      ],
+      stats: [
+        {value: "50+", label: "مشروع مكتمل"},
+        {value: "30+", label: "عميل سعيد"},
+        {value: "99.9%", label: "معدل رضا العميل"},
+        {value: "24/7", label: "دعم مستمر"}
+      ],
+      closing: {
+        title: "تبحث عن شريك تقني موثوق؟",
+        description: "نحوّل أفكارك إلى حلول رقمية مبتكرة تدفع أعمالك نحو النمو والتميز.",
+        button: "ابدأ مشروعك الآن"
+      }
     },
     contact: {
       eyebrow: "تواصل",
@@ -319,7 +390,25 @@ const content = {
       stats: Array<{value: string; label: string}>;
     };
   };
-  portfolio: {eyebrow: string; title: string; items: Array<[string, string]>};
+  portfolio: {
+    eyebrow: string;
+    titlePrefix: string;
+    titleHighlight: string;
+    titleSuffix: string;
+    description: string;
+    cta: string;
+    sort: string;
+    filters: string[];
+    projects: Array<{
+      image: string;
+      tag: string;
+      title: string;
+      description: string;
+      accent: string;
+    }>;
+    stats: Array<{value: string; label: string}>;
+    closing: {title: string; description: string; button: string};
+  };
   contact: {
     eyebrow: string;
     title: string;
@@ -351,6 +440,20 @@ function ServicesHeroVisual() {
         height={705}
         priority
         className="absolute left-1/2 top-1/2 w-[min(112%,900px)] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain"
+      />
+    </div>
+  );
+}
+
+function PortfolioHeroVisual() {
+  return (
+    <div className="relative min-h-[210px] overflow-hidden sm:min-h-[260px] lg:min-h-[330px]" aria-hidden="true">
+      <Image
+        src="/portfolio-hero-visual.png"
+        alt=""
+        width={1070}
+        height={425}
+        className="absolute left-1/2 top-1/2 w-[min(116%,780px)] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain"
       />
     </div>
   );
@@ -512,50 +615,124 @@ export default function HomePage({params}: Props) {
             })}
           </div>
 
-          <div className="mt-10 grid gap-8 rounded-lg border border-[#dbe5ff] bg-white p-7 shadow-[0_20px_70px_rgba(15,23,42,0.05)] md:grid-cols-[1fr_2fr] md:p-10">
-            <div className="md:border-e md:border-[#e7eaf2] md:pe-10">
-              <h3 className="max-w-xs text-3xl font-semibold leading-tight text-[#121722]">
-                {copy.services.why.title}
-              </h3>
-              <p className="mt-5 max-w-sm text-base leading-7 text-[#626978]">{copy.services.why.description}</p>
+        </div>
+      </section>
+
+      <section id="portfolio" className="relative isolate overflow-hidden bg-white px-5 pb-10 pt-28 md:py-16">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_10%,rgba(63,118,255,0.08),transparent_28%),radial-gradient(circle_at_70%_18%,rgba(242,196,81,0.09),transparent_26%),linear-gradient(180deg,#ffffff_0%,#fbfcff_100%)]" />
+        <div className="mx-auto max-w-[1680px]">
+          <div className="grid items-center gap-8 lg:grid-cols-[1.02fr_0.98fr]" dir={isArabic ? "ltr" : "rtl"}>
+            <div className={isArabic ? "text-right lg:order-2" : "text-left lg:order-2"} dir={isArabic ? "rtl" : "ltr"}>
+              <p className="text-base font-bold text-[#3f76ff] md:text-lg">{copy.portfolio.eyebrow}</p>
+              <h2 className="mt-5 text-[clamp(40px,4.35vw,70px)] font-semibold leading-[1.05] text-[#10131a]">
+                {copy.portfolio.titlePrefix}{" "}
+                <span className="text-[#3f76ff]">{copy.portfolio.titleHighlight}</span>{" "}
+                {copy.portfolio.titleSuffix}
+              </h2>
+              <p className="mt-5 max-w-[620px] text-[clamp(17px,1.12vw,22px)] font-medium leading-[1.65] text-[#7d8493]">
+                {copy.portfolio.description}
+              </p>
+              <Link
+                href="#contact"
+                className="mt-7 inline-flex h-14 items-center gap-5 rounded-full bg-[#111721] px-8 text-base font-semibold text-white shadow-[0_16px_36px_rgba(15,23,42,0.16)] transition duration-200 hover:scale-[1.02] md:h-16 md:px-9 md:text-lg"
+              >
+                {isArabic ? <ArrowLeft aria-hidden="true" size={22} /> : <ArrowUpRight aria-hidden="true" size={22} />}
+                {copy.portfolio.cta}
+              </Link>
             </div>
+
+            <div className="lg:order-1">
+              <PortfolioHeroVisual />
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-7 lg:grid-cols-3" dir="ltr">
+            {copy.portfolio.projects.map((project) => (
+              <Tilt
+                key={project.title}
+                rotationFactor={6}
+                isRevese
+                className="group relative rounded-lg"
+                springOptions={{
+                  damping: 4.1,
+                  mass: 0.2,
+                  stiffness: 26.7
+                }}
+                style={{
+                  transformOrigin: "center center"
+                }}
+              >
+                <Spotlight
+                  className="z-10 from-white/60 via-white/20 to-white/5 blur-2xl"
+                  size={260}
+                  springOptions={{
+                    damping: 4.1,
+                    mass: 0.2,
+                    stiffness: 26.7
+                  }}
+                />
+                <article
+                  className="relative overflow-hidden rounded-lg border border-[#e8ecf3] bg-white shadow-[0_18px_45px_rgba(15,23,42,0.045)] transition duration-200 group-hover:shadow-[0_26px_70px_rgba(63,118,255,0.13)]"
+                  style={{borderBottomColor: project.accent}}
+                >
+                  <div className="relative aspect-[2.52/1] overflow-hidden bg-[#edf1f7]">
+                    <Image
+                      src={project.image}
+                      alt=""
+                      width={620}
+                      height={248}
+                      className="h-full w-full object-fill transition duration-700 group-hover:scale-[1.02] group-hover:saturate-110"
+                    />
+                  </div>
+                  <div className={isArabic ? "px-5 pb-6 pt-5 text-right md:px-8 md:pb-7 md:pt-6" : "px-5 pb-6 pt-5 text-left md:px-8 md:pb-7 md:pt-6"}>
+                    <h3 className="text-xl font-semibold leading-snug text-[#111721] md:text-2xl">{project.title}</h3>
+                    <p className="mt-4 min-h-[56px] text-sm font-medium leading-7 text-[#7c8493] md:mt-5 md:min-h-[64px] md:text-base md:leading-8">
+                      {project.description}
+                    </p>
+                    <div className="mt-6 flex items-center justify-between md:mt-7">
+                      <Link href="#contact" className="inline-flex items-center gap-3 text-sm font-semibold text-[#111721] md:gap-4 md:text-base">
+                        {isArabic ? <ArrowLeft aria-hidden="true" size={20} /> : <ArrowUpRight aria-hidden="true" size={20} />}
+                        {isArabic ? "عرض التفاصيل" : "View details"}
+                      </Link>
+                      <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#e8ecf3] text-[#3c4655] md:h-11 md:w-11">
+                        <ExternalLink aria-hidden="true" size={19} />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="h-1.5" style={{backgroundColor: project.accent}} />
+                </article>
+              </Tilt>
+            ))}
+          </div>
+
+          <div className="mt-12 grid gap-8 rounded-lg border border-[#dbe5ff] bg-white p-7 shadow-[0_22px_70px_rgba(15,23,42,0.045)] lg:grid-cols-[2.3fr_1fr] lg:p-10">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {copy.services.why.stats.map((stat, index) => {
+              {copy.portfolio.stats.map((stat, index) => {
                 const Icon = serviceStatIcons[index];
                 return (
-                  <div key={stat.label} className="text-center md:text-start">
-                    <Icon aria-hidden="true" className="mx-auto h-9 w-9 text-[#3f76ff] md:mx-0" strokeWidth={1.9} />
-                    <p className="mt-5 text-4xl font-semibold leading-none text-[#11151d]">{stat.value}</p>
-                    <p className="mt-4 text-base font-medium leading-6 text-[#858b99]">{stat.label}</p>
+                  <div key={stat.label} className="border-[#e8ecf3] text-center lg:border-e lg:last:border-e-0">
+                    <Icon aria-hidden="true" className="mx-auto h-9 w-9 text-[#3f76ff]" strokeWidth={1.9} />
+                    <p className="mt-5 text-4xl font-semibold leading-none text-[#111721]">{stat.value}</p>
+                    <p className="mt-4 text-base font-medium leading-6 text-[#7f8796]">{stat.label}</p>
                   </div>
                 );
               })}
             </div>
+
+            <div className={isArabic ? "text-right" : "text-left"}>
+              <h3 className="text-3xl font-semibold leading-tight text-[#111721]">{copy.portfolio.closing.title}</h3>
+              <p className="mt-4 text-base font-medium leading-8 text-[#7f8796]">{copy.portfolio.closing.description}</p>
+              <Link
+                href="#contact"
+                className="mt-7 inline-flex h-14 items-center gap-5 rounded-lg border border-[#dfe5ef] bg-white px-8 text-base font-semibold text-[#111721] shadow-[0_12px_30px_rgba(15,23,42,0.035)]"
+              >
+                {isArabic ? <ArrowLeft aria-hidden="true" size={20} /> : <ArrowUpRight aria-hidden="true" size={20} />}
+                {copy.portfolio.closing.button}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
-      <Reveal id="portfolio" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <div className="rounded-[28px] border border-[var(--line)] bg-[#fafafa] p-6 md:p-10">
-          <p className="text-sm font-semibold text-[var(--muted)]">{copy.portfolio.eyebrow}</p>
-          <div className="mt-4 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <h2 className="display-serif max-w-2xl text-5xl leading-none md:text-7xl">{copy.portfolio.title}</h2>
-            <Link href="#contact" className="inline-flex items-center gap-2 text-sm font-semibold">
-              {copy.hero.cta}
-              <ArrowUpRight aria-hidden="true" className={isArabic ? "-scale-x-100" : ""} size={17} />
-            </Link>
-          </div>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {copy.portfolio.items.map(([label, value]) => (
-              <div key={label} className="rounded-[18px] border border-[var(--line)] bg-white p-5">
-                <p className="text-sm font-semibold text-[var(--muted)]">{label}</p>
-                <p className="mt-3 text-lg font-medium leading-7">{value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Reveal>
 
       <Reveal id="contact" className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[0.9fr_1.1fr] md:py-24">
         <div>
