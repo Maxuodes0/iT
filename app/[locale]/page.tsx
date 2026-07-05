@@ -1,14 +1,20 @@
 import {
-  AppWindow,
   ArrowUpRight,
+  ChartNoAxesCombined,
+  Clock3,
+  Cloud,
   Code2,
   Database,
   Layers3,
   Mail,
+  Palette,
+  Rocket,
   Send,
   ServerCog,
+  ShieldCheck,
   Smartphone,
-  Sparkles
+  Sparkles,
+  UsersRound
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,12 +50,22 @@ const content = {
       ]
     },
     services: {
-      eyebrow: "Services",
-      title: "What I can build for you",
+      eyebrow: "What we offer",
+      kicker: "Our Services",
+      title: "End-to-end digital solutions tailored to your business needs.",
+      hero: {
+        eyebrow: "Our Services",
+        title: "Digital Solutions That Drive",
+        highlight: "Real Impact",
+        description:
+          "We design and build innovative digital experiences that help businesses scale, automate, and succeed.",
+        primary: "Start a Project",
+        secondary: "See Our Work"
+      },
       items: [
         {
-          title: "Web development",
-          description: "Fast, responsive websites designed to convert visitors into customers",
+          title: "Web Development",
+          description: "Fast, secure, and scalable websites built with modern technologies.",
           includes: [
             "Modern UI design",
             "SEO optimization",
@@ -58,8 +74,8 @@ const content = {
           ]
         },
         {
-          title: "Mobile apps",
-          description: "iOS and Android apps with a smooth user experience and reliable performance",
+          title: "Mobile App Development",
+          description: "Native and cross-platform apps that deliver seamless experiences.",
           includes: [
             "Custom UX/UI design",
             "Cross-platform development",
@@ -68,16 +84,56 @@ const content = {
           ]
         },
         {
-          title: "Backend systems",
-          description: "Solid, secure infrastructure that scales with your business",
+          title: "Cloud & DevOps",
+          description: "Scalable cloud infrastructure and DevOps automation.",
           includes: [
             "Database design",
             "API development",
             "Third-party integrations",
             "Data security"
           ]
+        },
+        {
+          title: "UI/UX Design",
+          description: "User-centered designs that are beautiful, intuitive, and effective.",
+          includes: [
+            "Product flows",
+            "Design systems",
+            "Interactive prototypes",
+            "Usability refinement"
+          ]
+        },
+        {
+          title: "Business Solutions",
+          description: "Custom systems that streamline operations and boost productivity.",
+          includes: [
+            "Internal dashboards",
+            "Workflow automation",
+            "CRM and ERP tools",
+            "Reporting systems"
+          ]
+        },
+        {
+          title: "IT Support & Maintenance",
+          description: "Reliable support and maintenance to keep your systems running.",
+          includes: [
+            "Monitoring",
+            "Bug fixes",
+            "Security updates",
+            "Performance care"
+          ]
         }
-      ]
+      ],
+      why: {
+        title: "Why Businesses Choose Us",
+        description: "We combine creativity, technology, and strategy to deliver real results.",
+        stats: [
+          {value: "50+", label: "Projects Delivered"},
+          {value: "30+", label: "Happy Clients"},
+          {value: "99.9%", label: "Uptime & Reliability"},
+          {value: "24/7", label: "Support Available"}
+        ]
+      }
     },
     portfolio: {
       eyebrow: "Portfolio",
@@ -129,12 +185,21 @@ const content = {
       ]
     },
     services: {
-      eyebrow: "الخدمات",
-      title: "ما الذي أقدر أبنيه لك",
+      eyebrow: "ما نقدمه",
+      kicker: "خدماتنا",
+      title: "حلول رقمية متكاملة ومصممة حسب احتياج مشروعك.",
+      hero: {
+        eyebrow: "خدماتنا",
+        title: "حلول رقمية تصنع",
+        highlight: "أثر حقيقي",
+        description: "نصمم ونبني تجارب رقمية مبتكرة تساعد الشركات على النمو والأتمتة والنجاح.",
+        primary: "ابدأ مشروعك",
+        secondary: "شاهد أعمالنا"
+      },
       items: [
         {
           title: "تطوير مواقع",
-          description: "مواقع سريعة، متجاوبة، ومصممة لتحويل الزوار لعملاء",
+          description: "مواقع سريعة وآمنة وقابلة للتوسع مبنية بأحدث التقنيات.",
           includes: [
             "تصميم واجهة مستخدم حديثة",
             "تحسين محركات البحث (SEO)",
@@ -144,7 +209,7 @@ const content = {
         },
         {
           title: "تطبيقات جوال",
-          description: "تطبيقات iOS وAndroid بتجربة استخدام سلسة وأداء موثوق",
+          description: "تطبيقات أصلية ومتعددة المنصات بتجربة استخدام سلسة.",
           includes: [
             "تصميم UX/UI مخصص",
             "تطوير متعدد المنصات",
@@ -153,16 +218,56 @@ const content = {
           ]
         },
         {
-          title: "أنظمة وباكند",
-          description: "بنية تحتية قوية وآمنة تدعم نمو مشروعك",
+          title: "السحابة و DevOps",
+          description: "بنية سحابية قابلة للتوسع وأتمتة للنشر والتشغيل.",
           includes: [
             "تصميم قواعد بيانات",
             "بناء APIs",
             "ربط أنظمة خارجية",
             "أمان وحماية البيانات"
           ]
+        },
+        {
+          title: "تصميم UI/UX",
+          description: "تصاميم تتمحور حول المستخدم وتجمع بين الجمال والوضوح والفعالية.",
+          includes: [
+            "خرائط تجربة المستخدم",
+            "أنظمة تصميم",
+            "نماذج تفاعلية",
+            "تحسين قابلية الاستخدام"
+          ]
+        },
+        {
+          title: "حلول الأعمال",
+          description: "أنظمة مخصصة تبسط العمليات وترفع إنتاجية فريقك.",
+          includes: [
+            "لوحات تحكم داخلية",
+            "أتمتة الإجراءات",
+            "أنظمة CRM و ERP",
+            "تقارير تشغيلية"
+          ]
+        },
+        {
+          title: "الدعم والصيانة",
+          description: "دعم موثوق وصيانة مستمرة للحفاظ على استقرار أنظمتك.",
+          includes: [
+            "مراقبة الأنظمة",
+            "إصلاح الأعطال",
+            "تحديثات الأمان",
+            "تحسين الأداء"
+          ]
         }
-      ]
+      ],
+      why: {
+        title: "لماذا تختارنا الشركات",
+        description: "نجمع بين الإبداع والتقنية والاستراتيجية لتقديم نتائج حقيقية.",
+        stats: [
+          {value: "+50", label: "مشروع تم تسليمه"},
+          {value: "+30", label: "عميل سعيد"},
+          {value: "99.9%", label: "جاهزية واعتمادية"},
+          {value: "24/7", label: "دعم متاح"}
+        ]
+      }
     },
     portfolio: {
       eyebrow: "أعمالي",
@@ -197,8 +302,22 @@ const content = {
   about: {eyebrow: string; title: string; paragraphs: string[]};
   services: {
     eyebrow: string;
+    kicker: string;
     title: string;
+    hero: {
+      eyebrow: string;
+      title: string;
+      highlight: string;
+      description: string;
+      primary: string;
+      secondary: string;
+    };
     items: Array<{title: string; description: string; includes: string[]}>;
+    why: {
+      title: string;
+      description: string;
+      stats: Array<{value: string; label: string}>;
+    };
   };
   portfolio: {eyebrow: string; title: string; items: Array<[string, string]>};
   contact: {
@@ -215,11 +334,27 @@ const content = {
 }>;
 
 const techIcons = [Layers3, Code2, ServerCog, Database, Sparkles];
-const serviceIcons = [AppWindow, Smartphone, ServerCog];
+const serviceIcons = [Code2, Smartphone, Cloud, Palette, ChartNoAxesCombined, ShieldCheck];
+const serviceStatIcons = [Rocket, UsersRound, ShieldCheck, Clock3];
 
 type Props = {
   params: {locale: Locale};
 };
+
+function ServicesHeroVisual() {
+  return (
+    <div className="relative min-h-[330px] lg:min-h-[500px]" aria-hidden="true">
+      <Image
+        src="/services-hero-visual.png"
+        alt=""
+        width={1255}
+        height={705}
+        priority
+        className="absolute left-1/2 top-1/2 w-[min(112%,900px)] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain"
+      />
+    </div>
+  );
+}
 
 export default function HomePage({params}: Props) {
   const copy = content[params.locale];
@@ -228,14 +363,15 @@ export default function HomePage({params}: Props) {
 
   return (
     <main className="min-h-screen overflow-hidden bg-[var(--surface)] text-[var(--ink)]">
+      <DockNav
+        brand={copy.brand}
+        language={copy.language}
+        nav={copy.nav}
+        otherLocale={otherLocale}
+      />
+
       <section id="hero" className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[var(--surface)]">
         <AnimatedWave />
-        <DockNav
-          brand={copy.brand}
-          language={copy.language}
-          nav={copy.nav}
-          otherLocale={otherLocale}
-        />
 
         <div className="relative z-10 flex flex-1 flex-col">
           <section className="mx-auto w-full max-w-[min(75vw,2700px)] px-5 pb-2 pt-[calc(86px+6vh)] text-center md:pt-[calc(92px+5vh)]">
@@ -312,33 +448,92 @@ export default function HomePage({params}: Props) {
         </div>
       </Reveal>
 
-      <Reveal id="services" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold text-[var(--muted)]">{copy.services.eyebrow}</p>
-          <h2 className="display-serif mt-4 text-5xl leading-none md:text-7xl">{copy.services.title}</h2>
-        </div>
+      <section id="services" className="relative isolate overflow-hidden bg-white px-5 pb-16 pt-8 md:pb-24 md:pt-12">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_74%_12%,rgba(67,119,255,0.10),transparent_28%),radial-gradient(circle_at_34%_48%,rgba(15,23,42,0.045),transparent_30%),linear-gradient(180deg,#ffffff_0%,#fbfcff_100%)]" />
+        <div className="mx-auto max-w-[1540px]">
+          <div className="grid min-h-[500px] items-center gap-10 lg:grid-cols-[0.98fr_1.02fr]">
+            <div className={isArabic ? "text-right" : "text-left"}>
+              <div className="inline-flex items-center gap-3 rounded-full border border-[#e7ecf5] bg-white px-5 py-2 text-sm font-bold uppercase text-[#3f76ff] shadow-[0_12px_30px_rgba(15,23,42,0.04)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#3f76ff]" />
+                {copy.services.hero.eyebrow}
+              </div>
+              <h2 className="mt-9 max-w-[860px] text-[clamp(42px,4.15vw,68px)] font-semibold leading-[1.12] text-[#10131a]">
+                {copy.services.hero.title}{" "}
+                <span className="text-[#3f76ff]">{copy.services.hero.highlight}</span>
+              </h2>
+              <p className="mt-8 max-w-[610px] text-[clamp(18px,1.35vw,24px)] font-medium leading-[1.55] text-[#858b99]">
+                {copy.services.hero.description}
+              </p>
+              <div className="mt-10 flex flex-wrap items-center gap-7">
+                <Link
+                  href="#contact"
+                  className="inline-flex h-16 items-center gap-5 rounded-full bg-[#111721] px-8 text-lg font-semibold text-white shadow-[0_16px_36px_rgba(15,23,42,0.18)] transition duration-200 hover:scale-[1.02]"
+                >
+                  {copy.services.hero.primary}
+                  <ArrowUpRight aria-hidden="true" className={isArabic ? "-scale-x-100" : ""} size={22} />
+                </Link>
+                <Link href="#portfolio" className="inline-flex h-16 items-center gap-5 text-lg font-semibold text-[#222936]">
+                  {copy.services.hero.secondary}
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#e1e6ef] text-[#222936]">
+                    <ArrowUpRight aria-hidden="true" className={isArabic ? "-scale-x-100" : ""} size={20} />
+                  </span>
+                </Link>
+              </div>
+            </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {copy.services.items.map((service, index) => {
-            const Icon = serviceIcons[index];
-            return (
-              <article key={service.title} className="rounded-[24px] border border-[var(--line)] p-6 md:p-8">
-                <Icon aria-hidden="true" className="h-8 w-8" strokeWidth={1.8} />
-                <h3 className="mt-8 text-2xl font-semibold tracking-[-0.03em]">{service.title}</h3>
-                <p className="mt-4 leading-7 text-[var(--muted)]">{service.description}</p>
-                <ul className="mt-8 space-y-3 text-sm font-medium">
-                  {service.includes.map((item) => (
-                    <li key={item} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--ink)]" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            );
-          })}
+            <ServicesHeroVisual />
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {copy.services.items.map((service, index) => {
+              const Icon = serviceIcons[index];
+              return (
+                <article
+                  key={service.title}
+                  className="group grid min-h-[152px] grid-cols-[76px_1fr_24px] items-center gap-5 rounded-lg border border-[#ebedf3] bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-1 hover:border-[#cad8ff] hover:shadow-[0_22px_60px_rgba(66,111,255,0.10)] sm:p-6"
+                >
+                  <div className="flex h-16 w-16 items-center justify-center rounded-lg border border-[#e6eaf2] bg-white text-[#3f76ff] shadow-[0_10px_28px_rgba(15,23,42,0.04)]">
+                    <Icon aria-hidden="true" className="h-8 w-8" strokeWidth={2} />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-xl font-semibold leading-snug text-[#151922]">{service.title}</h3>
+                    <p className="mt-3 text-base leading-7 text-[#747b8b]">{service.description}</p>
+                  </div>
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    className={`text-[#9aa2b1] transition duration-200 group-hover:text-[#3f76ff] ${
+                      isArabic ? "-scale-x-100" : ""
+                    }`}
+                    size={24}
+                    strokeWidth={1.8}
+                  />
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="mt-10 grid gap-8 rounded-lg border border-[#dbe5ff] bg-white p-7 shadow-[0_20px_70px_rgba(15,23,42,0.05)] md:grid-cols-[1fr_2fr] md:p-10">
+            <div className="md:border-e md:border-[#e7eaf2] md:pe-10">
+              <h3 className="max-w-xs text-3xl font-semibold leading-tight text-[#121722]">
+                {copy.services.why.title}
+              </h3>
+              <p className="mt-5 max-w-sm text-base leading-7 text-[#626978]">{copy.services.why.description}</p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {copy.services.why.stats.map((stat, index) => {
+                const Icon = serviceStatIcons[index];
+                return (
+                  <div key={stat.label} className="text-center md:text-start">
+                    <Icon aria-hidden="true" className="mx-auto h-9 w-9 text-[#3f76ff] md:mx-0" strokeWidth={1.9} />
+                    <p className="mt-5 text-4xl font-semibold leading-none text-[#11151d]">{stat.value}</p>
+                    <p className="mt-4 text-base font-medium leading-6 text-[#858b99]">{stat.label}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
-      </Reveal>
+      </section>
 
       <Reveal id="portfolio" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <div className="rounded-[28px] border border-[var(--line)] bg-[#fafafa] p-6 md:p-10">

@@ -108,7 +108,7 @@ export function DockNav({brand, language, nav, otherLocale}: DockNavProps) {
   return (
     <motion.nav
       aria-label="Primary navigation"
-      className="fixed left-1/2 top-5 z-50 flex -translate-x-1/2 items-start gap-2 rounded-full border border-white/15 bg-black/70 px-3 py-2 text-white shadow-none backdrop-blur-2xl md:top-7 md:gap-3 md:px-4 md:py-3"
+      className="fixed left-1/2 top-5 z-[9999] flex -translate-x-1/2 items-start gap-2 rounded-full border border-white/15 bg-black/70 px-3 py-2 text-white shadow-none backdrop-blur-2xl md:top-7 md:gap-3 md:px-4 md:py-3"
       onMouseLeave={() => mouseX.set(Infinity)}
       onMouseMove={(event) => mouseX.set(event.clientX)}
     >
